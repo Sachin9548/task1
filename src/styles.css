@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* src/App.css */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 960px;
+}
+
+h1 {
+  color: #333;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+}
+/* src/FullScreenSection.css */
+
+/* src/FullScreenSection.css */
+/* Fullscreen section to cover the entire viewport */
+.fullscreen-section {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    #fff4f1,
+    #fbe9e4
+  ); /* Gradient background */
+  color: #000;
+  padding: 0 50px; /* Horizontal padding */
+  border-radius: 15px; /* Rounded corners for the full section */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for a floating effect */
+}
+
+.text-section {
+  max-width: 600px; /* Limit the width for better readability */
+}
+
+.text-section h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2; /* Slight line height adjustment */
+}
+
+.text-section p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.text-section .btn {
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  background-color: #fff; /* Button background color */
+  color: #ff5722; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Button shadow */
+}
+
+.text-section .btn:hover {
+  background-color: #ff5722; /* Button background color on hover */
+  color: #fff; /* Change text color on hover */
+  transform: translateY(-3px); /* Hover effect to lift the button */
+}
+
+/* Styling for the image section (optional image placement) */
+.image-section {
+  background-image: url("https://via.placeholder.com/300"); /* Example image */
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  height: 100%; /* Fill available height */
+  border-radius: 10px;
+  display: none; /* Hide the image on large screens */
+}
+
+@media (max-width: 768px) {
+  .fullscreen-section {
+    flex-direction: column-reverse;
+    padding: 30px;
+  }
+
+  .text-section {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .text-section h1 {
+    font-size: 2.5rem; /* Adjust font size on smaller screens */
+  }
+
+  .text-section p {
+    font-size: 1rem;
+  }
+
+  .image-section {
+    display: block; /* Show the image section for smaller screens */
+    height: 40vh; /* Adjust the height for smaller screens */
+  }
+}
+
+/* src/ServicesSection.css */
+
+/* Style the overall services section */
+.services-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style each individual card */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+.card-img-top {
+  border-radius: 10px 10px 0 0; /* Rounded top corners for images */
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Gallery Section */
+.gallery-section {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 60px 0;
+}
+
+.gallery-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Style the individual gallery item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners for images */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Zoom-in effect on hover */
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.gallery-item .caption {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Ensure responsive behavior */
+@media (max-width: 768px) {
+  .gallery-section h2 {
+    font-size: 2rem; /* Adjust heading size on small screens */
+  }
+
+  .gallery-item .caption {
+    font-size: 1.2rem; /* Adjust font size of caption on small screens */
+  }
+}
